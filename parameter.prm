@@ -1,0 +1,36 @@
+  # List of parameters for numerical experiments
+
+  # Specify the test case we want to run:
+  # TEST_ZERO - test case with analytical solution
+  # TEST_ONE - test case with variable k and a melt profile
+  set TestCase = TEST_ZERO
+
+  subsection Physical data
+    # Declare the initial time, final time, time step size, and domain length
+    set time = 0.
+    set final_time   = 50.
+    set time_step     = 0.1
+
+    # Declare the onset temperature of solid and liquid in the crust (TC) and basalt (TM)
+    # Irrelevant if Test0 is set
+    set TC_solid = 1025.0
+    set TC_liquid = 1858.0
+    set TM_solid = 999.0
+    set TM_interm = 1366.0
+    set TM_liquid = 1513.0
+  end
+
+  subsection Space discretization
+    # Declare the data that is relevant to the space discretization
+    set deg  = 2
+    set freq = 50
+    set ini_refinement_level = 10
+    set n_pre_refinement_steps = 7
+
+    # Specify the refinement criterion to use for adaptive remeshing:
+    # 1- global refinement, 2- KellyErrorEstimator, 3- 2ndDerivativeApproximation
+    set mode = 2
+
+    # If mode = 1, specify the levels of global refinement
+    set level = 3
+  end
