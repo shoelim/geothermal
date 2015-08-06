@@ -1,3 +1,4 @@
+/* Author: Soon Hoe Lim                                   */
 /* Disclaimer: This program is developed by modifying the existing tutorial programs
                in deal.II documentation. A large parts of the codes in this program
                are inherited from the tutorial programs for the purpose of solving
